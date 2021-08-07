@@ -2,12 +2,13 @@
   "name": "That's Fake!",
   "description": "Testing",
   "version": "1.0",
-  "manifest_version": 3,
-  "action": {
+  "manifest_version": 2,
+  "browser_action": {
     "default_title": "Click to log"
   },
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab"],
   "background": {
-    "service_worker": "background.js"
-  }
+    "scripts": ["tf.js","background.js"]
+  },
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest 'unsafe-eval'; object-src 'self'"
 }
