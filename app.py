@@ -1,4 +1,4 @@
-from flask import Flask, flash, jsonify, render_template, request, redirect, url_for
+from flask import Flask, jsonify, render_template, request, redirect, url_for
 from flask.templating import render_template
 import tensorflow as tf
 import numpy #as np
@@ -10,8 +10,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import sklearn.preprocessing
 from sklearn.preprocessing import LabelBinarizer
 import pickle
-import nltk
-nltk.download('punkt')
+#import nltk
+#nltk.download('punkt')
 from newspaper import Article
 
 app = Flask(__name__)
@@ -97,14 +97,15 @@ def home():
 @app.route("/result", methods=['POST'])
 def result():
     news_link = request.form['news_link']
-    #url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-pot-guns-and-drones/'
     article = Article(news_link)
     article.download()
     article.parse()
     input_text = article.text
     prediction = model_input(input_text)
     return render_template("result.html", model_prediction = prediction)
-
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
