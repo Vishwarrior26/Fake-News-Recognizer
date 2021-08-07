@@ -1,0 +1,13 @@
+{
+  "name": "Test",
+  "description": "Testing",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Click to log"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
