@@ -37,11 +37,11 @@ def model_input(input_text):
     with open('test_labels.txt') as file:
         test_labels = file.readlines()
         file.close()
-    print(len(train_texts))
+    print("Reading Files is done")
     tokenizer = Tokenizer(num_words=vocab_size, oov_token=oov_tok)
+    print("Tokenizing First part is done")
     tokenizer.fit_on_texts(train_texts)
-
-    word_index = tokenizer.word_index
+    print("Tokenizing is done")
 
     train_sequences = tokenizer.texts_to_sequences(train_texts)
     train_padded = pad_sequences(train_sequences, maxlen=max_length,
@@ -53,11 +53,7 @@ def model_input(input_text):
                                 padding=padding_type,
                                 truncating=trunc_type)
 
-    train_padded = numpy.array(train_padded)
-    train_labels = numpy.array(train_labels)
-    test_padded = numpy.array(test_padded)
-    test_labels = numpy.array(test_labels)
-
+    print("Sequencing is done")
     import numpy as np
     import tensorflow as tf
     train_padded = np.array(train_padded)

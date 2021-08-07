@@ -3,13 +3,37 @@
 {% block content %}
 
 <div>
-<h1 class = "text-center">Check out if the news you're reading is fake.</h1>
-<h2 class = "text-center"> What the model predicted: {{model_prediction}}</h2>
+    <body>
+        <style>
+            body {
+              background-image: url('https://i.postimg.cc/pLKrWb6X/pexels-brotin-biswas-518543.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-position: center;
+              background-size: 100% 100%;
+            }
+            .text {
+            font-family: 'Helvetica';
+            text-align: center;
+            color: ivory;
+          }
+          .header {
+            font-size:3vw;
+          }
+          .para {
+            margin-left: 20%;
+            margin-right: 20%;
+            font-size:2vw;
+          }
+    
+            </style>
+    <h1 class = "text-center text">Check out if the news you're reading is fake.</h1>
+    <h2 class = "text-center text"> What the model predicted: {{model_prediction}}</h2>
     {% if model_prediction <0.5 %}
-        <h2 class = "text-center"> We predicted the news that you're reading to be fake. </h2>
+        <h2 class = "text-center text"> We predicted the news that you're reading to be fake. </h2>
     {% else %}    
-    <h2 class ="text-center">We predicted that the news you're reading is not fake.</h2>
+    <h2 class ="text-center text ">We predicted that the news you're reading is not fake.</h2>
     {% endif %}
-
+</body>
 </div>
 {% endblock %}

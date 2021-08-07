@@ -3,9 +3,32 @@
 {% block content %}
 
 <body>
+    <style>
+        body {
+          background-image: url('https://i.postimg.cc/pLKrWb6X/pexels-brotin-biswas-518543.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+          background-size: 100% 100%;
+        }
+        .text {
+        font-family: 'Helvetica';
+        text-align: center;
+        color: ivory;
+      }
+      .header {
+        font-size:3vw;
+      }
+      .para {
+        margin-left: 20%;
+        margin-right: 20%;
+        font-size:2vw;
+      }
+
+        </style>
     <div class = 'container'>
-        <h1 class="text-center">Find out if the news you're reading is fake.</h1>
-        <form class = "form text-center" action= "{{ url_for('result') }}" method="post">
+        <h1 class="text-center text">Find out if the news you're reading is fake.</h1>
+        <form class = "form text-center text" action= "{{ url_for('result') }}" method="post">
             <label for="news_link">Enter in your news article link</label><br>
             <textarea name="news_link" cols="50" rows="5"></textarea>
             <div class="col-auto">
