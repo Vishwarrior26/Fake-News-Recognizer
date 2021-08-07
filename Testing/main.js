@@ -14,7 +14,5 @@ if (index != -1) {
 }
 
 console.log(cleanerText);
-import * as tf from '@tensorflow/tfjs';
 
-chrome.runtime.getURL('model.json');
-const model = await tf.loadLayersModel(chrome.runtime.getURL('model.json'));
+// const model =  tf.loadLayersModel('model.json');
