@@ -5,7 +5,7 @@ var index = dirtyText.indexOf(title);
 var cleanerText = "";
 
 // print results
-console.log(document.title);
+// console.log(document.title);
 
 if (index != -1) {
   cleanerText = dirtyText.slice(index);
@@ -13,6 +13,7 @@ if (index != -1) {
   cleanerText = dirtyText;
 }
 
-console.log(cleanerText);
-
-// const model =  tf.loadLayersModel('model.json');
+// console.log(cleanerText);
+import './tf.js';
+const model = loadLayersModel('model.json');
+console.log("test")
