@@ -9,10 +9,9 @@ console.log(document.title);
 // console.log(index);
 // console.log(dirtyText.slice(index));
 
-if (index != -1){
+if (index != -1) {
   cleanerText = dirtyText.slice(index);
-}
-else {
+} else {
   cleanerText = dirtyText;
 }
 
