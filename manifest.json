@@ -8,5 +8,5 @@
       "matches": ["<all_urls>"],
       "js": ["main.js"]
     }
- ],
+ ]
 }
