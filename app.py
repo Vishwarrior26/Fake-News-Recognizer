@@ -103,7 +103,9 @@ def result():
     input_text = article.text
     prediction = model_input(input_text)
     return render_template("result.html", model_prediction = prediction)
-
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
