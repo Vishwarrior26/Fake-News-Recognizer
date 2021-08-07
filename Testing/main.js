@@ -15,4 +15,4 @@ if (index != -1) {
 
 console.log(cleanerText);
 
-// const model =  loadLayersModel('model.json');
+// const model =  tf.loadLayersModel('model.json');
