@@ -3,7 +3,16 @@ import nltk
 nltk.download('punkt')
 
 from newspaper import Article
-url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-pot-guns-and-drones/'
+
+url = 'https://www.cnn.com/2021/08/06/politics/doj-clark-trump-election/index.html'
 article = Article(url)
 
-article.text()
+article.download()
+
+print(article.html)
+
+article.parse()
+
+print(article.text)
+
+print(article.title)
