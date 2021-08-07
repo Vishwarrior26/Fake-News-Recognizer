@@ -1,6 +1,3 @@
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    target: {tabId: tab.id},
-    files: ['main.js']
-  });
+chrome.browserAction.onClicked.addListener(function(tab) {
+   chrome.tabs.executeScript(null, {file: "main.js"});
 });

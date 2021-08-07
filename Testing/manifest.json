@@ -8,7 +8,9 @@
   },
   "permissions": ["activeTab"],
   "background": {
-    "scripts": ["tf.js","background.js"]
+    "scripts": ["tf.js","background.js"],
+    "persistent": true 
   },
+  "browser_action": {},
   "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest 'unsafe-eval'; object-src 'self'"
 }
