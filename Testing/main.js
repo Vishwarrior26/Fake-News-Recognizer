@@ -14,6 +14,6 @@ if (index != -1) {
 }
 
 // console.log(cleanerText);
-import './tf.js';
-const model = loadLayersModel('model.json');
+import * as tf from './tf.js';
+const model = tf.loadLayersModel('model.json');
 console.log("test")
