@@ -11,11 +11,15 @@
 
   .button {
     text-align: center;
-    color: red;
+  }
+
+  .output {
+    text-align: center;
+    margin-top: 20px;
   }
 
   footer {
-    bottom: 3;
+    bottom: 15;
     left: 0;
     position: fixed;
     right: 0;
@@ -30,20 +34,26 @@
 
 <body>
   <div class="header">
-    <h1>that's fake! v1.0</h1>
+    <h1>that's fake!</h1>
     <h2>detect fake news</h2>
   </div>
   <div class="button">
-    <button id="button">check current tab</button>
+    <!-- <button id="button" style = "background-color: #75b0c7;">check current tab</button> -->
+    <!-- ^ is lightish teal blue -->
+    <button id="button" style = "background-color: #c4c4c4; border-radius:10px;">check current tab</button>
+    <!-- <button id="button" style = "background-color: #5d6a87;">check current tab</button> -->
   </div>
+  <br>
   <hr>
   <script type="text/javascript" src="popup.js"></script>
-  <p id="answer"></p>
-  <p id="percentage"></p>
+  <div class='output'>
+    <p id="answer"></p>
+    <p id="percentage"></p>
+  </div>
   <footer>
-    <a href="https://github.com/Vishwarrior26/Fake-News-Recognizer">our github</a>
-    <br>
     <p>Pranav, Saurabh, Sidd, Visruth</p>
+    <a href="https://github.com/Vishwarrior26/Fake-News-Recognizer">v1.0</a>
+    <br>
   </footer>
   <!-- Remove percentage if not needed; else, set it from the API -->
 </body>
