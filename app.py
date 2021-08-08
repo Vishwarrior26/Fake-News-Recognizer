@@ -13,7 +13,7 @@ import pickle
 #import nltk
 #nltk.download('punkt')
 from newspaper import Article
-
+from flask_restful import Resource, Api 
 app = Flask(__name__)
 
 def model_input(input_text):
@@ -84,7 +84,7 @@ def model_input(input_text):
     return prediction
 
 
-
+'''
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -102,6 +102,33 @@ def result():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/handler/<string:pagetext>", methods=['GET'])
+def handler(pagetext):
+    #news_link = link
+    #article = Article(news_link)
+    #article.download()
+    #article.parse()
+    #input_text = article.text
+    input_text = pagetext
+    prediction = model_input(input_text)
+    return jsonify({"prediction": str(prediction[0][0])})
+'''
+
+
+
+
+app = Flask(__name__)
+api = Api(app)
+
+class Handler(Resource):
+    def get(self, pagetext):
+        input_text = pagetext
+        prediction = model_input(input_text)
+        return jsonify({"prediction": str(prediction[0][0])})
+
+api.add_resource(Handler, "/handler/<string:pagetext>")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
