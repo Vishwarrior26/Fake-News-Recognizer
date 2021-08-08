@@ -1,0 +1,10 @@
+{
+  "name": "that's fake!",
+  "version": "1.0",
+  "description": "is that fake news?",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "manifest_version": 3
+}
