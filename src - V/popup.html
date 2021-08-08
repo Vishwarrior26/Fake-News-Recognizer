@@ -1,9 +1,22 @@
 <html>
-<head>
-</head>
-<body class="body-popup">
-    <button id="button" class="btn btn-warning">check current tab</button>
-    <hr>
-    <script type="text/javascript" src="popup.js"></script>
+<style>
+body{
+  min-height: 104px;
+  /* Try a min-height of 120? */
+  min-width: 84px;
+}
+.text-center {
+  text-align: center;
+}
+</style>
+<body>
+  <div class="text-center">
+    <button id="button">check current tab</button>
+  </div>
+  <hr>
+  <script type="text/javascript" src="popup.js"></script>
+  <p id="answer" style="text-align:center"></p>
+  <p id="percent" style="text-align:center">100%</p>
+
 </body>
 </html>

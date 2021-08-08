@@ -1,9 +1,6 @@
-document.getElementById('button').addEventListener('click', hello);
-
-function hello() {
-  alert('Hello')
-}
+document.getElementById('button').addEventListener('click', fakeOrNot);
 
 function fakeOrNot() {
   //TODO API stuff here
+  document.getElementById("answer").innerHTML = "processing...";
 }
