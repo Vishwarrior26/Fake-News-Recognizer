@@ -7,3 +7,4 @@ if (index != -1) {
 } else {
   cleanerText = dirtyText;
 }
+cleanerText = cleanerText.replace(/\s+/g, '-').toLowerCase();
