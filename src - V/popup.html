@@ -1,21 +1,29 @@
 <html>
 <style>
-body{
-  min-height: 104px;
-  min-width: 84px;
-}
-.text-center {
-  text-align: center;
-}
+  body {
+    min-height: 104px;
+    min-width: 105px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    /* font-family: Monaco, "Courier New", monospace; */
+  }
 </style>
+
 <body>
   <div class="text-center">
     <button id="button">check current tab</button>
   </div>
   <hr>
   <script type="text/javascript" src="popup.js"></script>
-  <p id="answer" style="text-align:center"></p>
-  <p id="percentage" style="text-align:center"></p>
-<!-- Remove percentage if not needed; else, set it from the API -->
+  <p id="answer"></p>
+  <p id="percentage"></p>
+  <!-- Remove percentage if not needed; else, set it from the API -->
 </body>
+
 </html>
