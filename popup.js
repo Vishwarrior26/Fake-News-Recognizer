@@ -32,7 +32,7 @@ function fakeOrNot() {
     }
   }).catch((err) => {
     console.log("rejected", err);
-    document.getElementById("answer").innerHTML = "The content in this tab is fake.";
+    document.getElementById("answer").innerHTML = "Unfortunately there has been an error. Please click the button and try again.";
     document.getElementById("percentage").innerHTML = "";
   });
   
