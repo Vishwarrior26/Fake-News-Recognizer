@@ -4,7 +4,7 @@
   "description": "is that fake news?",
   "permissions": ["activeTab"],
   "background": {
-    "service_worker": "background.html"
+    "service_worker": "background.js"
   },
   "manifest_version": 3
 }
