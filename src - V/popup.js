@@ -10,6 +10,7 @@ function fakeOrNot() {
   //TODO API stuff here
   document.getElementById("answer").innerHTML = "processing...";
   document.getElementById("percentage").innerHTML = "0%";
+
   var dirtyText = document.body.innerText;
   var index = dirtyText.indexOf(document.title);
   var cleanerText = "";
