@@ -1,6 +1,6 @@
 {
   "name": "that's fake!",
-  "version": "2.1",
+  "version": "1.0",
   "description": "is that fake news? V",
   "manifest_version": 3,
   "action": {
@@ -10,7 +10,7 @@
       "32": "images/TFN32.png",
       "48": "images/TFN48.png",
       "128": "images/TFN128.png"
-    }
+    }x
   },
   "icons": {
     "16": "images/TFN16.png",
